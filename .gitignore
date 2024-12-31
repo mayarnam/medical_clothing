@@ -1,0 +1,25 @@
+# Python-related files
+*.pyc
+*.pyo
+__pycache__/
+
+# Virtual environment
+venv/
+.env
+
+# Django migrations
+*/migrations/*
+
+# Database files
+*.sqlite3
+
+# Static and media files
+static/
+media/
+
+# PyCharm and VS Code specific files
+.idea/
+.vscode/
+
+# Other files to ignore
+*.log
