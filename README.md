@@ -34,7 +34,7 @@ Une fois que l’application est lancée :
 - Create superuser for Django (for admin access):python manage.py createsuperuser
 - Start the Django development server:python manage.py runserver
   ### usage
-  1. start the server
+  1. start the server :
   python manage.py runserver
   2. access the application at:
      http://127.0.0.1:8000/
