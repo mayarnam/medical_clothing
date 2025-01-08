@@ -62,6 +62,9 @@ Une fois que l’application est lancée :
 ├── .gitignore                 # Git ignore file
 ├── README.md                  # Project description and setup instructions
 └── package.json               # Node.js package manager file
+## Contributing
+
+We welcome contributions from everyone! If you'd like to help improve this project, follow the steps below to get started.
 
 
 
