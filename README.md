@@ -41,27 +41,42 @@ Une fois que l’application est lancée :
   admin portal: http://127.0.0.1:8000/admin/
   
   ### Project Structure
-  medical_clothing/
+ medical_clothing/
 │
-├── backend/                   # Contains the backend code (Django)
-│   ├── store/                  # Django app for the store logic
-│   │   ├── models.py           # Django models for products and orders
-│   │   ├── views.py            # Django views for handling requests
-│   │   ├── urls.py             # API routes for the store app
-│   │   └── migrations/         # Database migrations
-│   ├── manage.py               # Django management file
-│   └── requirements.txt        # Python dependencies for Django
+├── backend/                        # Contains the backend code (Django)
+│   ├── store/                       # Django app for store logic
+│   │   ├── migrations/              # Database migration files
+│   │   ├── models.py                # Models for storing product details (e.g., medical clothing, prices)
+│   │   ├── views.py                 # Views for handling requests related to products, categories, and orders
+│   │   ├── urls.py                  # URL routing for the store (e.g., to view products, categories)
+│   │   ├── serializers.py           # Serializers for data representation (e.g., converting data to JSON)
+│   │   ├── admin.py                 # Admin interface setup for managing products, categories
+│   │   ├── templates/               # HTML templates for rendering pages
+│   │   │   ├── index.html           # Home page template
+│   │   │   ├── product_detail.html  # Template to display product details
+│   │   │   ├── product_list.html    # Template to display the list of products
+│   │   │   └── cart.html            # Template for shopping cart page
+│   ├── manage.py                    # Django management file (to handle migrations, testing, etc.)
+│   ├── settings.py                  # Django project settings, including database setup, installed apps
+│   └── requirements.txt             # Python dependencies required for the backend
 │
-├── frontend/                  # Contains the frontend code (React.js)
-│   ├── src/
-│   │   ├── components/         # React components for various parts of the UI
-│   │   ├── pages/              # React pages (views)
-│   │   ├── App.js              # Main React component
-│   │   └── index.js            # React entry point
+├── frontend/                       # Contains the frontend code (React.js)
+│   ├── public/                      # Static files (e.g., images, favicon)
+│   ├── src/                         # React application source code
+│   │   ├── components/              # Reusable React components (e.g., ProductList, ProductDetail, Cart, etc.)
+│   │   ├── pages/                   # React pages (views) for different sections (e.g., HomePage, ProductPage)
+│   │   ├── App.js                   # Main component that holds routing and core structure
+│   │   ├── index.js                 # The entry point for React to render the app
+│   │   ├── styles/                  # CSS or Styled Components for the UI layout
+│   │   ├── api/                     # API functions to fetch data from the backend (e.g., fetching products, categories)
+│   ├── package.json                 # Node.js dependencies and configuration for the frontend
+│   └── .gitignore                   # Git ignore file for frontend
 │
-├── .gitignore                 # Git ignore file
-├── README.md                  # Project description and setup instructions
-└── package.json               # Node.js package manager file
+├── .gitignore                      # Git ignore file for the whole project
+├── README.md                       # Project documentation with setup and usage instructions
+├── requirements.txt                # Project-wide Python dependencies (if any other dependencies are required)
+└── docker-compose.yml              # (Optional) Docker configuration to containerize the app (for easy deployment)
+
 ## Contributing
 
 We welcome contributions from everyone! If you'd like to help improve this project, follow the steps below to get started.
